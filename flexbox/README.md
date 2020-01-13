@@ -20,3 +20,9 @@ body {
 }
 ```
 7. Navigate to localhost:4000 in your browser and check taht the background is pink
+
+## Following the following:
+Started by using this website tutorial
+[https://internetingishard.com/html-and-css/flexbox/](https://internetingishard.com/html-and-css/flexbox/)
+To get the date to work see:
+[https://stackoverflow.com/questions/32540044/html-display-current-date/32540196](https://stackoverflow.com/questions/32540044/html-display-current-date/32540196)

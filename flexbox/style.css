@@ -1,3 +1,86 @@
 body {
   background-color: pink;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  display: flex;              /*makes everything nested in this div, flex or a flex item as it were, and it is called a flex container*/
+  justify-content: center;    
+  /* this tells us how to align the items in the flex container -- notice how we are defining properties of the children in the style of the parent!!! This is a bit of a feature for flexbox 
+    you can also use positions flex-start and flex-end, space-around and space-between*/
+  color: #fff;
+  background-color: #5995DA;  /* Blue */
+  padding: 20px 0;
+}
+
+.menu {
+  border: 1px solid #fff;  /* For debugging */
+  width: 900px;
+  border: 1px solid #fff;
+  width: 900px;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  /*the space-around and space-between positions only work when there are multiple items. .menu-container only has one child, .menu. But .menu has 3 children, the date,s ignup and login.*/
+  /*Flex containers only know how to position elements that are one level deep (i.e., their child elements).*/
+}
+
+.links {
+  /*now that links has been created as a div inside menu we can make it flex too and then 2 of the 3 menu items can be styled differently*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  align-items: center;
+  /* in order to align the items vertically you just need the display: flex in the parent and align items: center in the child */
+  /* for align-items: stretch see below */
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social,
+.logo,
+.subscribe {
+  border: 1px solid #5995DA;
+  /* with the border you can see what align items:stretch does, v useful for: The box for each item extends the full height of the flex container, regardless of how much content it contains. A common use case for this behavior is creating equal-height columns with a variable amount of content in each one—something very difficult to do with floats. */
+  /* to do this change the parent (header) to align-items: stretch */
+}
+
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  flex-wrap: wrap;
+  /* without this the photos flow off the edge of the page */
+   justify-content: center;    /* without this the wrapped items are not centered they justify to the left by default */
+  width: 900px;
+  display: flex;
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
