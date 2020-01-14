@@ -77,6 +77,12 @@ body {
    justify-content: center;    /* without this the wrapped items are not centered they justify to the left by default */
   width: 900px;
   display: flex;
+  /* flex-direction: column; */
+  /* default val is row */
+  align-items: center;      /* if flex-direction is column, it has effectively rotated the direcion of the container, so instead of doing the vertiacal alignment (for defualt or row flex direction) align-items now does the horizontal alignment */
+  /* flex-direction: row-reverse; */
+  /* this is super cool and can be column reverse too.. It just reorders the elements that are in that row... */
+  flex-direction: row /*this is the default*/
 }
 
 .photo-grid-item {
@@ -84,3 +90,69 @@ body {
   width: 300px;
   height: 300px;
 }
+
+.first-item {
+  /* order: -1; */
+/* default is 0, so increasing to 1 moves item to far right */
+}
+
+.second-item {
+  /* order: 1; */
+}
+
+
+.third-item {
+  order: -1;
+}
+
+.last-item {
+  /* order: -1; */
+/* default is 0, so decreasing to -1 moves item to far left */
+}
+
+/* align self overrides the align-items value from the container-parent */
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+
+/* flexbox can change the way that items fill theor containers using flex: The following is a footer container with 3 footer-items inside they all have the class footer-item but also have individual class names too*/
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;
+  /* this line says all the footer items have the same weight so they should flex to fill the container equally */
+}
+/* this flex 2 tells us actually make footer 3 weigh twice as much as the others (take up twice as much room as them alone). Note you need to have the flex: 1 on them all to start with too */
+/* OR you could do it by individually putting the flex weight on each class */
+
+/* this simply overrides the weight for the footer-three because it comes later in the css file */
+.footer-three {
+  flex: 2;
+}
+
+/* flex initial allows you to ignore flex rules and have a fixed width among your flexible items */
+/* obviosly the fixed width items do not resize with screen size */
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
+}
+
+/* if we get rid of links in the html so that signup, login and date are all on the same nesting level, we can see what auto margins do in flexbox. */
+.signup {
+  margin-left: auto;
+}
+/* Auto-margins in flexbox are special. They can be used as an alternative to an extra <div> when trying to align a group of items to the left/right of a container. Think of auto-margins as a “divider” for flex items in the same container. */
+/* Auto-margins eat up all the extra space in a flex container, so instead of distributing items equally, this moves the .signup and any following items (.login) to the right side of the container. This will give you the exact same layout we had before, but without that extra nested <div> to group them. Sometimes, it’s nice to keep your HTML flatter. */
+/* This is the most complex thing in flexbox so far as it is non-intuitive */
