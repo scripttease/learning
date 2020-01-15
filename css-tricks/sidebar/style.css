@@ -207,7 +207,7 @@ div.sidebar-footer > ul > li {
   }
 
   .sidebar-hamburger {
-    var(--size: 25px);
+    --size: 25px;
     padding-top: 2px;
     width: var(--size);
     height: var(--size);
@@ -215,7 +215,7 @@ div.sidebar-footer > ul > li {
   }
 
   .sidebar-logo {
-    var(--size: 35px);
+    --size: 35px;
     width: var(--size);
     height: var(--size);
   }
