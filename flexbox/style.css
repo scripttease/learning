@@ -12,7 +12,7 @@ body {
   display: flex;              /*makes everything nested in this div, flex or a flex item as it were, and it is called a flex container*/
   justify-content: center;    
   /* this tells us how to align the items in the flex container -- notice how we are defining properties of the children in the style of the parent!!! This is a bit of a feature for flexbox 
-    you can also use positions flex-start and flex-end, space-around and space-between*/
+  you can also use positions flex-start and flex-end, space-around and space-between*/
   color: #fff;
   background-color: #5995DA;  /* Blue */
   padding: 20px 0;
@@ -74,7 +74,7 @@ body {
 .photo-grid {
   flex-wrap: wrap;
   /* without this the photos flow off the edge of the page */
-   justify-content: center;    /* without this the wrapped items are not centered they justify to the left by default */
+  justify-content: center;    /* without this the wrapped items are not centered they justify to the left by default */
   width: 900px;
   display: flex;
   /* flex-direction: column; */
@@ -93,7 +93,7 @@ body {
 
 .first-item {
   /* order: -1; */
-/* default is 0, so increasing to 1 moves item to far right */
+  /* default is 0, so increasing to 1 moves item to far right */
 }
 
 .second-item {
@@ -107,7 +107,7 @@ body {
 
 .last-item {
   /* order: -1; */
-/* default is 0, so decreasing to -1 moves item to far left */
+  /* default is 0, so decreasing to -1 moves item to far left */
 }
 
 /* align self overrides the align-items value from the container-parent */
@@ -156,3 +156,5 @@ body {
 /* Auto-margins in flexbox are special. They can be used as an alternative to an extra <div> when trying to align a group of items to the left/right of a container. Think of auto-margins as a “divider” for flex items in the same container. */
 /* Auto-margins eat up all the extra space in a flex container, so instead of distributing items equally, this moves the .signup and any following items (.login) to the right side of the container. This will give you the exact same layout we had before, but without that extra nested <div> to group them. Sometimes, it’s nice to keep your HTML flatter. */
 /* This is the most complex thing in flexbox so far as it is non-intuitive */
+
+
