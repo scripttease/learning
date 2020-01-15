@@ -169,19 +169,11 @@ div.sidebar-footer > ul > li {
   margin-left: var(--sidebar-width);
   max-width: calc(100% - var(--sidebar-width));
 }
+/* this wont work as IDK what the page html does and i dont have it... */
 
-body {
-  background-color: tan;
-}
 
-/* @media screen and (max-width: 992px) { */
-/*   body { */
-/*     background-color: blue; */
-/*   } */
-/* } */
-/* @media only screen and (max-width: var(--screen-small-sidebar-width)) { */
 /* @media screen and (max-width: calc(var(--screen-small) + var(--sidebar-width)) { */
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 810px) {
   body {
     background-color: blue;
   }
@@ -191,11 +183,13 @@ body {
   }
 
   .sidebar:not(:focus-within) {
-    transform: translate(0 - 240px);
+    transform: translate(-240px);
+    background-color: blue;
   }
   
   .sidebar:not(:focus-within) > div.sidebar-mobile-header {
-      transform: translate(-240px);
+      transform: translate(240px);
+      background-color: pink;
   }
 
   .sidebar-mobile-header {

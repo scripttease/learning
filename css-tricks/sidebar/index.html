@@ -19,14 +19,16 @@
         <span class="sidebar-hamburger"></span>
       </div>
 
+      <!-- this bit isn't quite right ask louis re html -->
       <div class="sidebar-content">
-
+        <div class="sidebar-logo">
         <a class="sidebar-header" href="/">
-          <div class="sidebar-logo">
-            <img src="/images/logo1.png" alt="logo" class="sidebar-logo-image"/>
-          </div>
-          <h2>logoName</h2>
+          <!-- <div class="sidebar-logo"> -->
+            <img src="/images/logo1.png" alt="logo" class="sidebar-logo-image sidebar-logo"/>
+          <!-- </div> -->
         </a>
+          <h2>logoName</h2>
+        </div>
 
         <div class="sidebar-group">
           <h2>
@@ -99,5 +101,8 @@
         </div>
       </div>
     </nav> 
+    <main class="page" role="main">
+      <!-- <%= render @view_module, @view_template, assigns %> -->
+    </main>
   </body>
 </html>
