@@ -58,6 +58,10 @@
   --border-radius: 10px;
 }
 
+body {
+  margin: 0px;
+}
+
 .sidebar {
   background-color: var(--color-black);
   color: var(--color-white);
@@ -176,17 +180,18 @@ div.sidebar-footer > ul > li {
   display: none;
 }
 
-.page {
-  margin-left: var(--sidebar-width);
-  max-width: calc(100% - var(--sidebar-width));
-}
+/* .page { */
+/*   margin-left: var(--sidebar-width); */
+/*   max-width: calc(100% - var(--sidebar-width)); */
+/* } */
 /* this wont work as IDK what the page html does and i dont have it... */
 
 
-/* @media screen and (max-width: calc(var(--screen-small) + var(--sidebar-width)) { */
+/* note that css variables do not work in media queries */
+/* @media screen and (max-width: calc( var(--screen-small) + var(--sidebar-width)) { */
 @media screen and (max-width: 810px) {
   body {
-    background-color: blue;
+    /* background-color: blue; */
   }
 
   .sidebar {
@@ -195,12 +200,12 @@ div.sidebar-footer > ul > li {
 
   .sidebar:not(:focus-within) {
     transform: translate(-240px);
-    background-color: blue;
+    /* background-color: blue; */
   }
   
   .sidebar:not(:focus-within) > div.sidebar-mobile-header {
       transform: translate(240px);
-      background-color: pink;
+      /* background-color: pink; */
   }
 
   .sidebar-mobile-header {
