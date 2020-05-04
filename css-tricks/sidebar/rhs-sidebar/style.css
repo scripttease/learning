@@ -1,0 +1,266 @@
+
+
+:root {
+  --main-bg-color: brown;
+  --sidebar-width: 240px;
+
+  /* // Brand colors */
+  --color-white: #fff;
+  --color-black: #373b40;
+  --color-light-black: lighten(--color-black, 7);
+  --color-grey: #979797;
+  --color-light-grey: #c8cfd6;
+  --color-purple: #a966dc;
+  --color-green: #02baac;
+  --color-pale-green: #81ddd6;
+  --color-blue: #1fb6ff;
+  --color-orangered: #f95849;
+
+  --color-faint-blue: #f0f5fb;
+  --color-faint-grey: #f3f6f9;
+
+  /* // Color mappings */
+  --color-background: --color-faint-grey;
+  --color-border: --color-light-grey;
+
+  --color-link: darken(--color-green, 6);
+  --color-text: --color-black;
+  --color-text-light: lighten(--color-black, 10);
+
+  --color-warn: --color-orangered;
+  --color-info: --color-green;
+
+  --color-text-warn: darken(--color-warn, 5);
+  --color-text-info: darken(--color-green, 5);
+
+  /* // Timings */
+  --hover-transition-time: 0.1s;
+  --two-times-hover-transition-time: 0.2s;
+
+  /* // Sizes */
+  --font-size: 17px;
+  --font-size-minus-three: 14px;
+  --bar-height: 64px;
+  --zero-minus-bar-height: -64px;
+  --page-padding: 14px;
+  --half-page-padding: 7px;
+  --page-padding-extra: 15px;
+  --four-times-page-padding: 56px;
+
+  /* // Media queries */
+  --screen-small: 570px;
+  --screen-medium: 768px;
+  --screen-large: 960px;
+  --screen-small-minus-sidebar-width: 506px;
+
+  /* // misc */
+  --shadow: 0px 2px 5px 0 --color-light-grey;
+  --border-radius: 10px;
+}
+
+body {
+  margin: 0px;
+  background-color: pink;
+}
+
+.sidebar-hamburger-header-al {
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  background-color: transparent;
+  color: black;
+  display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--page-padding);
+    position: fixed;
+    /* width: 100vw; */
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+.sidebar {
+  background-color: var(--color-black);
+  /* background-color: transparent; */
+  color: var(--color-white);
+  display: inline-block;
+  width: var(--sidebar-width);
+  position: fixed;
+  top: 0;
+  transition: transform ease var(--hover-transition-time);
+  z-index: 700;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+}
+
+.sidebar-header {
+  display: block;
+  padding: var(--page-padding);
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--page-padding) * 1.1);
+}
+
+.sidebar-header h2 {
+  display: inline-block;
+  margin: 0 0 0 var(--page-padding);
+  color: var(--color-white);
+}
+
+.sidebar-logo {
+  --size: 40px;
+
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--color-white);
+  border-radius: 999px;
+  padding: 2px;
+}
+
+/* .sidebar-logo-image { */
+/*   /1* align-self: center; *1/ */
+/*   margin-left: auto; */
+/*   margin-right: auto; */
+/*   margin-top: 7px; */
+/*   display: block; */
+/* } */
+
+.sidebar-logo img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar-group {
+  margin: var(--page-padding 0);
+  background-color: var(--color-black);
+}
+.sidebar-group h2 {
+    margin-top: 0;
+    color: var(--color-grey);
+    font-size: var(--font-size);
+    text-transform: uppercase;
+    padding-left: var(--page-padding);
+  }
+
+.sidebar-group a {
+    display: block;
+    padding: var(--half-page-padding) var(--page-padding);
+    color: var(--color-white);
+    transition: background-color var(--hover-transition-time);
+  }
+
+.sidebar-group a:hover {
+      background-color: var(--color-light-black);
+      color: pink;
+    }
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: var(--page-padding);
+  padding-top: calc(var(--page-padding) * 2);
+  padding-right: calc(var(--page-padding) * 2);
+  font-size: var(--font-size-minus-three);
+}
+
+a.sidebar-footer {
+  color: var(--color-light-grey);
+}
+
+div.sidebar-footer > ul > li {
+    font-weight: bold;
+    line-height: 1.3;
+    white-space: nowrap;
+    display: inline-block;
+    margin-right: 0.7rem;
+  }
+
+.sidebar-copyright {
+  color: var(--color-grey);
+  margin-top: var(--half-page-padding);
+}
+
+.sidebar-hamburger-header {
+  display: none;
+}
+
+/* .page { */
+/*   margin-left: var(--sidebar-width); */
+/*   max-width: calc(100% - var(--sidebar-width)); */
+/* } */
+/* this wont work as IDK what the page html does and i dont have it... */
+
+
+/* note that css variables do not work in media queries */
+/* @media screen and (max-width: calc( var(--screen-small) + var(--sidebar-width)) { */
+@media screen and (max-width: 810px) {
+  body {
+    /* background-color: blue; */
+  }
+
+  .sidebar {
+    overflow: visible;
+  }
+
+  .sidebar:not(:focus-within) {
+    transform: translate(-240px);
+    /* background-color: blue; */
+  }
+  
+  .sidebar:not(:focus-within) > div.sidebar-hamburger-header {
+      transform: translate(240px);
+      /* background-color: pink; */
+  }
+
+  .sidebar-hamburger-header {
+    /* transform: translate($sidebar-width, 0 - $bar-height); */
+    transform: translate(240px, -64px);
+    transition: transform ease var(--two-times-hover-transition-time);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--page-padding);
+    background-color: var(--color-black);
+    position: fixed;
+    width: 100vw;
+    z-index: -1;
+  }
+
+  .sidebar-hamburger-image {
+    --size: 25px;
+    padding-top: 2px;
+    width: var(--size);
+    height: var(--size);
+    display: inline-block;
+  }
+
+  .sidebar-logo {
+    --size: 35px;
+    width: var(--size);
+    height: var(--size);
+  }
+
+  .page {
+    margin-top: var(--bar-height);
+    margin-left: 0;
+    max-width: 100%;
+    padding: var(--page-padding);
+  }
+}
