@@ -1,5 +1,3 @@
-
-
 :root {
   --main-bg-color: brown;
   --sidebar-width: 240px;
@@ -58,6 +56,15 @@
   --border-radius: 10px;
 }
 
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0px;
   background-color: pink;
@@ -70,17 +77,15 @@ body {
   background-color: transparent;
   color: black;
   display: inline-block;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: var(--page-padding);
-    position: fixed;
-    /* width: 100vw; */
-    width: 100%;
-    z-index: -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--page-padding);
+  position: fixed;
+  width: 100vw;
+  /* width: 100%; */
+  z-index: -1;
 }
-
-
 
 .sidebar {
   background-color: var(--color-black);
@@ -153,24 +158,24 @@ a {
   background-color: var(--color-black);
 }
 .sidebar-group h2 {
-    margin-top: 0;
-    color: var(--color-grey);
-    font-size: var(--font-size);
-    text-transform: uppercase;
-    padding-left: var(--page-padding);
-  }
+  margin-top: 0;
+  color: var(--color-grey);
+  font-size: var(--font-size);
+  text-transform: uppercase;
+  padding-left: var(--page-padding);
+}
 
 .sidebar-group a {
-    display: block;
-    padding: var(--half-page-padding) var(--page-padding);
-    color: var(--color-white);
-    transition: background-color var(--hover-transition-time);
-  }
+  display: block;
+  padding: var(--half-page-padding) var(--page-padding);
+  color: var(--color-white);
+  transition: background-color var(--hover-transition-time);
+}
 
 .sidebar-group a:hover {
-      background-color: var(--color-light-black);
-      color: pink;
-    }
+  background-color: var(--color-light-black);
+  color: pink;
+}
 
 .sidebar-footer {
   margin-top: auto;
@@ -185,12 +190,12 @@ a.sidebar-footer {
 }
 
 div.sidebar-footer > ul > li {
-    font-weight: bold;
-    line-height: 1.3;
-    white-space: nowrap;
-    display: inline-block;
-    margin-right: 0.7rem;
-  }
+  font-weight: bold;
+  line-height: 1.3;
+  white-space: nowrap;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
 
 .sidebar-copyright {
   color: var(--color-grey);
@@ -207,7 +212,6 @@ div.sidebar-footer > ul > li {
 /* } */
 /* this wont work as IDK what the page html does and i dont have it... */
 
-
 /* note that css variables do not work in media queries */
 /* @media screen and (max-width: calc( var(--screen-small) + var(--sidebar-width)) { */
 @media screen and (max-width: 810px) {
@@ -223,10 +227,10 @@ div.sidebar-footer > ul > li {
     transform: translate(-240px);
     /* background-color: blue; */
   }
-  
+
   .sidebar:not(:focus-within) > div.sidebar-hamburger-header {
-      transform: translate(240px);
-      /* background-color: pink; */
+    transform: translate(240px);
+    /* background-color: pink; */
   }
 
   .sidebar-hamburger-header {
