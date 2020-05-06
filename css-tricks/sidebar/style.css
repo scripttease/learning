@@ -67,10 +67,11 @@ body {
   color: var(--color-white);
   display: inline-block;
   width: var(--sidebar-width);
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   transition: transform ease var(--hover-transition-time);
   z-index: 700;
+    float: right;
 }
 
 .sidebar-content {
@@ -196,10 +197,11 @@ div.sidebar-footer > ul > li {
 
   .sidebar {
     overflow: visible;
+    float: right;
   }
 
   .sidebar:not(:focus-within) {
-    transform: translate(-240px);
+    transform: translate(540px);
     /* background-color: blue; */
   }
   
