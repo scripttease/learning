@@ -75,6 +75,11 @@ body {
   display: flex;
 }
 
+.sidebar-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .sidebar-hamburger-header-al {
   position: fixed;
   top: 0;
@@ -107,7 +112,8 @@ body {
 
 .sidebar-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-start;
   height: 100vh;
   overflow: auto;
 }
@@ -227,11 +233,12 @@ div.sidebar-footer > ul > li {
 
 .sidebar {
   overflow: visible;
-  transform: translate(240px, -64px);
+  transform: translate(0px);
 }
 
 .sidebar:not(:focus-within) {
-  transform: translate(-240px);
+  transform: translate(190px);
+  /* TODO length of icon and of margin not 190 */
 }
 
 .sidebar:not(:focus-within) > div.sidebar-hamburger-header-al {
@@ -264,6 +271,11 @@ div.sidebar-footer > ul > li {
   --size: 35px;
   width: var(--size);
   height: var(--size);
+}
+
+.expanded-sidebar-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .page {
