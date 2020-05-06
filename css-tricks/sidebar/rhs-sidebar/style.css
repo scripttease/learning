@@ -8,7 +8,7 @@
   --color-light-black: lighten(--color-black, 7);
   --color-grey: #979797;
   --color-light-grey: #c8cfd6;
-  --color-purple: #a966dc;
+  --color-purple: #56138a;
   --color-green: #02baac;
   --color-pale-green: #81ddd6;
   --color-blue: #1fb6ff;
@@ -68,6 +68,10 @@ html {
 body {
   margin: 0px;
   background-color: pink;
+}
+
+.content-container {
+  display: flex;
 }
 
 .sidebar-hamburger-header-al {
