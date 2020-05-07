@@ -137,9 +137,6 @@ body {
   color: var(--color-white);
 }
 
-.sidebar-logo-image {
-
-}
 /* .sidebar-logo { */
   /* --size: 40px;
 
@@ -149,7 +146,7 @@ body {
   background-color: var(--color-white);
   border-radius: 999px;
   padding: 2px; */
-}
+/* } */
 
 /* .sidebar-logo-image { */
 /*   /1* align-self: center; *1/ */
@@ -257,7 +254,7 @@ div.sidebar-footer > ul > li {
 }
 
 .sidebar:not(:focus-within) {
-  transform: translate(175px);
+  transform: translate(180px);
   /* TODO length of icon and of margin not 190 */
 }
 
@@ -271,9 +268,9 @@ div.sidebar-footer > ul > li {
 
 
 .sidebar-logo-header {
-  transform: translate($sidebar-width, 0 - $bar-height); */
-  transform: translate(240px, -64px);
-  transition: transform ease var(--two-times-hover-transition-time);
+  /* transform: translate($sidebar-width, 0 - $bar-height); */
+  /* transform: translate(240px, -64px); */
+  /* transition: transform ease var(--two-times-hover-transition-time); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
