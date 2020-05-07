@@ -71,6 +71,11 @@ body {
   background-color: pink;
 }
 
+.content {
+  padding: var(--page-padding);
+  padding-top: 90px;
+}
+
 .content-container {
   display: flex;
 }
@@ -132,15 +137,18 @@ body {
   color: var(--color-white);
 }
 
-.sidebar-logo {
-  --size: 40px;
+.sidebar-logo-image {
+
+}
+/* .sidebar-logo { */
+  /* --size: 40px;
 
   display: inline-block;
   width: var(--size);
   height: var(--size);
   background-color: var(--color-white);
   border-radius: 999px;
-  padding: 2px;
+  padding: 2px; */
 }
 
 /* .sidebar-logo-image { */
@@ -173,6 +181,10 @@ a {
   padding-top: 64px;
 } */
                 
+.sidebar-group.sidebar-group-padding-top {
+  padding-top: 40px;
+}
+
 .sidebar-group {
   margin: var(--page-padding 0);
   background-color: var(--color-black);
@@ -245,7 +257,7 @@ div.sidebar-footer > ul > li {
 }
 
 .sidebar:not(:focus-within) {
-  transform: translate(190px);
+  transform: translate(175px);
   /* TODO length of icon and of margin not 190 */
 }
 
@@ -266,10 +278,10 @@ div.sidebar-footer > ul > li {
   flex-direction: row;
   justify-content: space-between;
   padding: var(--page-padding);
-  background-color: var(--color-black);
+  /* background-color: var(--color-black); */
   position: fixed;
   width: 100vw;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .sidebar-hamburger-image {
@@ -296,6 +308,7 @@ div.sidebar-footer > ul > li {
 
 .close-arrow-image {
   float: right;
+  padding: var(--page-padding);
 }
 
 .page {
