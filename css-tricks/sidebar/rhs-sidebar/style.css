@@ -1,4 +1,6 @@
 :root {
+
+
   --main-bg-color: brown;
   --sidebar-width: 240px;
   --sidebar-height: 50px;
@@ -71,21 +73,21 @@ body {
   background-color: pink;
 }
 
-.content {
+.page-container {
+  display: flex;
+}
+
+.central-content {
   padding: var(--page-padding);
   padding-top: 90px;
 }
 
-.content-container {
-  display: flex;
-}
-
-.sidebar-container {
+.nav-container {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.sidebar-logo-header {
+.navbar-logo-top {
   position: fixed;
   top: 0;
   /* left: 0; */
@@ -105,7 +107,7 @@ body {
 
 .sidebar {
   /* background-color: var(--color-black); */
-  /* background-color: transparent; */
+  background-color: transparent;
   color: var(--color-white);
   display: inline-block;
   width: var(--sidebar-width);
@@ -115,7 +117,12 @@ body {
   z-index: 700;
 }
 
-.sidebar-content {
+.sidebar {
+  overflow: visible;
+  transform: translate(0px);
+}
+
+.sidebar-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -156,11 +163,11 @@ body {
 /*   display: block; */
 /* } */
 
-.sidebar-logo img {
+/* .sidebar-logo img {
   margin-left: auto;
   margin-right: auto;
   display: block;
-}
+} */
 
 ul {
   list-style: none;
@@ -231,43 +238,18 @@ div.sidebar-footer > ul > li {
   margin-top: var(--half-page-padding);
 }
 
-.sidebar-hamburger-header {
-  display: none;
-}
-
-/* .page { */
-/*   margin-left: var(--sidebar-width); */
-/*   max-width: calc(100% - var(--sidebar-width)); */
-/* } */
-/* this wont work as IDK what the page html does and i dont have it... */
-
-/* note that css variables do not work in media queries */
-/* @media screen and (max-width: calc( var(--screen-small) + var(--sidebar-width)) { */
-/* @media screen and (max-width: 810px) {
-  body { */
-/* background-color: blue; */
-/* } */
-
-.sidebar {
-  overflow: visible;
-  transform: translate(0px);
-}
 
 .sidebar:not(:focus-within) {
   transform: translate(180px);
   /* TODO length of icon and of margin not 190 */
 }
 
-/* .sidebar:not(:focus-within) > div.sidebar-content > a.sidebar-header > div.hamburger-image {
-  display: none
-} */
-
-.sidebar:focus-within > div.sidebar-content > a.sidebar-header > div.hamburger-image {
+.sidebar:focus-within > div.sidebar-container > a.sidebar-header > div.hamburger-image {
   display: none
 }
 
 
-.sidebar-logo-header {
+.navbar-logo-top {
   /* transform: translate($sidebar-width, 0 - $bar-height); */
   /* transform: translate(240px, -64px); */
   /* transition: transform ease var(--two-times-hover-transition-time); */
@@ -281,19 +263,12 @@ div.sidebar-footer > ul > li {
   /* z-index: -1; */
 }
 
-.sidebar-hamburger-image {
-  --size: 25px;
-  padding-top: 2px;
-  width: var(--size);
-  height: var(--size);
-  display: inline-block;
-}
 
-.sidebar-logo {
+/* .sidebar-logo {
   --size: 35px;
   width: var(--size);
   height: var(--size);
-}
+} */
 
 .expanded-sidebar-container {
   height: 100vh;
@@ -314,3 +289,71 @@ div.sidebar-footer > ul > li {
   max-width: 100%;
   padding: var(--page-padding);
 }
+/* .page { */
+/*   margin-left: var(--sidebar-width); */
+/*   max-width: calc(100% - var(--sidebar-width)); */
+/* } */
+/* this wont work as IDK what the page html does and i dont have it... */
+
+/* note that css variables do not work in media queries */
+/* @media screen and (max-width: calc( var(--screen-small) + var(--sidebar-width)) { */
+/* @media screen and (max-width: 810px) {
+  body { */
+/* background-color: blue; */
+/* } */
+
+
+
+/* .sidebar-hamburger-header {
+  display: none;
+} */
+
+
+/* .sidebar-hamburger-image {
+  --size: 25px;
+  padding-top: 2px;
+  width: var(--size);
+  height: var(--size);
+  display: inline-block;
+} */
+
+
+/* .sidebar:not(:focus-within) > div.sidebar-content > a.sidebar-header > div.hamburger-image {
+  display: none
+} */
+
+/* .sidebar-hamburger-header {
+  display: none;
+} */
+
+
+/* .sidebar-hamburger-image {
+  --size: 25px;
+  padding-top: 2px;
+  width: var(--size);
+  height: var(--size);
+  display: inline-block;
+} */
+
+
+/* .sidebar:not(:focus-within) > div.sidebar-content > a.sidebar-header > div.hamburger-image {
+  display: none
+} */
+
+/* .sidebar-hamburger-header {
+  display: none;
+} */
+
+
+/* .sidebar-hamburger-image {
+  --size: 25px;
+  padding-top: 2px;
+  width: var(--size);
+  height: var(--size);
+  display: inline-block;
+} */
+
+
+/* .sidebar:not(:focus-within) > div.sidebar-content > a.sidebar-header > div.hamburger-image {
+  display: none
+} */
